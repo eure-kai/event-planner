@@ -33,7 +33,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Schedule Sunday 1/8:</h1>
+        <h2>Schedule Sunday 1/8:</h2>
         <table>
             <thead>
               <tr>
@@ -56,7 +56,7 @@
                             <i class="material-icons right">edit</i>
                             Info/Edit
                         </a>
-                        <a class="btn-small waves-effect waves-light red">
+                        <a class="btn-small waves-effect waves-light red" onclick="M.toast({html: 'Event deleted!'})">
                             <i class="material-icons right">delete</i>
                             Delete
                         </a>
@@ -68,11 +68,11 @@
                     <td>1:00-5:30 PM</td>
                     <td>Palisades Mall</td>
                     <td>
-                        <a class="btn-small waves-effect waves-light" href="item.html">
+                        <a class="btn-small waves-effect waves-light" href="event.html">
                             <i class="material-icons right">edit</i>
                             Info/Edit
                         </a>
-                        <a class="btn-small waves-effect waves-light red">
+                        <a class="btn-small waves-effect waves-light red" onclick="M.toast({html: 'Event deleted!'})" class="btn">
                             <i class="material-icons right">delete</i>
                             Delete
                         </a>
@@ -84,11 +84,11 @@
                     <td>7:00-9:00 PM</td>
                     <td>My house</td>
                     <td>
-                        <a class="btn-small waves-effect waves-light" href="item.html">
+                        <a class="btn-small waves-effect waves-light" href="event.html">
                             <i class="material-icons right">edit</i>
                             Info/Edit
                         </a>
-                        <a class="btn-small waves-effect waves-light red">
+                        <a class="btn-small waves-effect waves-light red" onclick="M.toast({html: 'Event deleted!'})">
                             <i class="material-icons right">delete</i>
                             Delete
                         </a>
@@ -96,6 +96,43 @@
                 </tr>
             </tbody>
           </table>
+
+          <div class="section" id="addEventsAdd">
+            <h2>Add stuff:</h2>
+            <form>
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                            <input id="event_name" type="text" class="validate">
+                            <label for="event_name">Event Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input placeholder="Enter your description here" id="desc" type="text" class="validate">
+                          <label for="desc">Description</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                            Time:
+                            <div class="input-field inline">
+                                <input placeholder="9:00" id="time" type="text" class="validate">
+                            </div>
+                            
+                            Location:
+                            <div class="input-field inline">
+                                <input placeholder="New York City" id="loc" type="text" class="validate">
+                            </div>
+                        </div>
+                      </div>
+                    </form>
+                    <a class="btn waves-effect waves-light">
+                        <i class="material-icons right">done</i>
+                        Submit
+                    </a>
+                  </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
