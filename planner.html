@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Planner</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        form {
+            border: solid 2px lightgrey;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        form:focus-within {
+            border-color: orange;
+        }
+
+        tr:hover {
+            background-color: #F0F0F0;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule Sunday 1/8:</h1>
+        <table>
+            <thead>
+              <tr>
+                  <th>Event Name</th>
+                  <th>Description</th>
+                  <th>Time</th>
+                  <th>Location</th>
+                  <th></th>
+              </tr>
+            </thead>
+        
+            <tbody>
+                <tr>
+                    <td>Mr. Krabs</td>
+                    <td>Walk my dog after I eat breakfast</th>
+                    <td>10:00-10:30 AM</td>
+                    <td>Lions Park</td>
+                    <td>
+                        <a class="btn-small waves-effect waves-light" href="event.html">
+                            <i class="material-icons right">edit</i>
+                            Info/Edit
+                        </a>
+                        <a class="btn-small waves-effect waves-light red">
+                            <i class="material-icons right">delete</i>
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tony's Party <i class="material-icons right">info_outline</i></td>
+                    <th>My best friend's birthday party!</th>
+                    <td>1:00-5:30 PM</td>
+                    <td>Palisades Mall</td>
+                    <td>
+                        <a class="btn-small waves-effect waves-light" href="item.html">
+                            <i class="material-icons right">edit</i>
+                            Info/Edit
+                        </a>
+                        <a class="btn-small waves-effect waves-light red">
+                            <i class="material-icons right">delete</i>
+                            Delete
+                        </a>
+                    </td>
+                  </tr>
+                <tr>
+                    <td>Finish Spanish Project</td>
+                    <td>Need to finish homework after dinner</td>
+                    <td>7:00-9:00 PM</td>
+                    <td>My house</td>
+                    <td>
+                        <a class="btn-small waves-effect waves-light" href="item.html">
+                            <i class="material-icons right">edit</i>
+                            Info/Edit
+                        </a>
+                        <a class="btn-small waves-effect waves-light red">
+                            <i class="material-icons right">delete</i>
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>
