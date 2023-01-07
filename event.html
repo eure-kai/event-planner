@@ -13,72 +13,105 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        form {
+            border: solid 2px lightgrey;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        form:focus-within {
+            border-color: orange;
+        }
+
+        tr:hover {
+            background-color: #F0F0F0;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
-        <h2>Event details:</h2>
-        <table class="responsive-table">
-            <thead>
-              <tr>
-                  <th>Event Name</th>
-                  <th>Description</th>
-                  <th>Time</th>
-                  <th>Location</th>
-                  <th></th>
-              </tr>
-            </thead>
+        <div class="section" id="header">
+            <h1>Event details:</h1>
+            <table class="responsive-table">
+                <tr>
+                    <th><h5><strong><u>Event Name:</strong></u></h5></th>
+                    <td><h5><strong>Tony's Party</strong> <i class="material-icons">info_outline</i></h5></td>
+                </tr>
+                <tr>
+                    <th><h5><strong><u>Description:</strong></u></h5></th>
+                    <td><h5>My best friend's birthday party!</h5></td>
+                </tr>
+                <tr>
+                    <th><h5><strong><u>Time:</strong></u></h5></th>
+                    <td><h5>1:00-5:30 PM</h5></td>
+                </tr>      
+                <tr>
+                    <th><h5><strong><u>Location:</strong></u></h5></th>
+                    <td><h5>Palisades Mall</h5></td>
+                </tr> 
+            </table>
+         </div>
+
+        <div class="section" id="eventEdit">
+            <a class="btn-large waves-effect waves-light orange left modal-trigger" href="#stuffEdit">
+                <i class="material-icons right">edit</i>
+                Edit
+            </a>
+            <a class="btn-large waves-effect waves-light red right" onclick="M.toast({html: 'Event deleted!'})">
+                <i class="material-icons right">delete</i>
+                Delete
+            </a>
+        </div>
         
-            <tbody>
-                <tr>
-                    <td>Mr. Krabs</td>
-                    <td>Walk my dog after I eat breakfast</th>
-                    <td>10:00-10:30 AM</td>
-                    <td>Lions Park</td>
-                    <td>
-                        <a class="btn-small waves-effect waves-light" href="event.html">
-                            <i class="material-icons right">edit</i>
-                            Info/Edit
-                        </a>
-                        <a class="btn-small waves-effect waves-light red" onclick="M.toast({html: 'Event deleted!'})">
-                            <i class="material-icons right">delete</i>
-                            Delete
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tony's Party <i class="material-icons right">info_outline</i></td>
-                    <th>My best friend's birthday party!</th>
-                    <td>1:00-5:30 PM</td>
-                    <td>Palisades Mall</td>
-                    <td>
-                        <a class="btn-small waves-effect waves-light" href="event.html">
-                            <i class="material-icons right">edit</i>
-                            Info/Edit
-                        </a>
-                        <a class="btn-small waves-effect waves-light red" onclick="M.toast({html: 'Event deleted!'})" class="btn">
-                            <i class="material-icons right">delete</i>
-                            Delete
-                        </a>
-                    </td>
-                  </tr>
-                <tr>
-                    <td>Finish Spanish Project</td>
-                    <td>Need to finish homework after dinner</td>
-                    <td>7:00-9:00 PM</td>
-                    <td>My house</td>
-                    <td>
-                        <a class="btn-small waves-effect waves-light" href="event.html">
-                            <i class="material-icons right">edit</i>
-                            Info/Edit
-                        </a>
-                        <a class="btn-small waves-effect waves-light red" onclick="M.toast({html: 'Event deleted!'})">
-                            <i class="material-icons right">delete</i>
-                            Delete
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-          </table>
+        <div class="modal" id="stuffEdit">
+            <div class="modal-content">
+                <h3>Add stuff:</h3>
+                    <form>
+                        <div class="row">
+                                    
+                            <div class="input-field col s6">
+                                <input id="event_name" type="text" class="validate">
+                                <label for="event_name">Event Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="Enter your description here" id="desc" type="text" class="validate">
+                                <label for="desc">Description</label>
+                            </div>
+                        </div>    
+                        
+                        <div class="row">
+                            <div class="input-field col s6">
+                                Time:
+                                <div class="input-field inline">
+                                    <input placeholder="9:00" id="time" type="text" class="validate">
+                                </div>
+                            </div>
+                            <div class="input-field col s6">
+                                Location: 
+                                <div class="input-field inline"> 
+                                    <input placeholder="New York City" id="loc" type="text" class="validate"> </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <a class="btn waves-effect waves-light" onclick="M.toast({html: 'Event added!'})">
+                                <i class="material-icons right">done</i>
+                                Submit
+                            </a>
+                        </div>
+
+                        
+                    </form>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <a class="waves-effect waves-light btn-large" href="planner.html" title="Go back!">
+            <i class="material-icons left">arrow_back</i> Go back to planner
+        </a>
+    </div>
     
 </body>
 </html>
