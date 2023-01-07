@@ -1,2 +1,2 @@
 # event-planner
-https://eure-kai.github.io/practice-prototype/
+https://eure-kai.github.io/event-planner/
