@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    
     <style>
         form {
             border: solid 2px lightgrey;
@@ -33,7 +33,7 @@
 
 <body>
     <div class="container">
-        <div class="section" id="header">
+        <div class="section flow-text" id="header">
             <h1>Event details:</h1>
             <table class="responsive-table">
                 <tr>
@@ -55,8 +55,8 @@
             </table>
          </div>
 
-        <div class="section" id="eventEdit">
-            <a class="btn-large waves-effect waves-light orange left modal-trigger" href="#stuffEdit">
+        <div class="section" id="eventControls">
+            <a class="btn-large waves-effect waves-light orange left modal-trigger" href="#eventEdit">
                 <i class="material-icons right">edit</i>
                 Edit
             </a>
@@ -66,45 +66,48 @@
             </a>
         </div>
         
-        <div class="modal" id="stuffEdit">
+        <div class="modal" id="eventEdit" tabindex="0">
             <div class="modal-content">
-                <h3>Add stuff:</h3>
-                    <form>
-                        <div class="row">
-                                    
-                            <div class="input-field col s6">
-                                <input id="event_name" type="text" class="validate">
-                                <label for="event_name">Event Name</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input placeholder="Enter your description here" id="desc" type="text" class="validate">
-                                <label for="desc">Description</label>
-                            </div>
-                        </div>    
-                        
-                        <div class="row">
-                            <div class="input-field col s6">
-                                Time:
-                                <div class="input-field inline">
-                                    <input placeholder="9:00" id="time" type="text" class="validate">
-                                </div>
-                            </div>
-                            <div class="input-field col s6">
-                                Location: 
-                                <div class="input-field inline"> 
-                                    <input placeholder="New York City" id="loc" type="text" class="validate"> </div>
+                <h3>Update event:</h3>
+                <form>
+                    <div class="row">
+                                
+                        <div class="input-field col s6">
+                            <label for="event_name">Event Name</label>
+                            <input id="event_name" type="text" class="validate" data-length="32" required>
+                        </div>
+                        <div class="input-field col s6">
+                            <label for="desc">Description</label>
+                            <input id="desc" placeholder="Enter your description here" type="text" class="validate" data-length="32" required>
+                        </div>
+                    </div>    
+                    
+                    <div class="row">
+                        <div class="input-field col s6">
+                            Time:
+                            <div class="input-field inline">
+                                <label for="timee"></label>
+                                <input id="timee" type="time" class="validate" required>
                             </div>
                         </div>
-
-                        <div class="modal-footer">
-                            <a class="btn waves-effect waves-light" onclick="M.toast({html: 'Event added!'})">
-                                <i class="material-icons right">done</i>
-                                Submit
-                            </a>
+                        <div class="input-field col s6">
+                            Location: 
+                            <div class="input-field inline">
+                                <label for="loc"></label>    
+                                <input id="loc" placeholder="New York City" type="text" class="validate" data-length="32" required> 
+                            </div>
                         </div>
+                    </div>
 
+                    <div class="modal-footer">
+                        <button class="btn waves-effect waves-light green" type="submit" onclick="M.toast({html: 'Event updated!'})">
+                            <i class="material-icons right">done</i>
+                            Save changes
+                        </button>
+                        <button class="modal-close waves-effect waves-green btn-flat">Cancel</button>
+                    </div>
                         
-                    </form>
+                </form>
             </div>
         </div>
         <br><br><br><br><br><br>
@@ -112,6 +115,6 @@
             <i class="material-icons left">arrow_back</i> Go back to planner
         </a>
     </div>
-    
+    <script> M.AutoInit();</script>
 </body>
 </html>
