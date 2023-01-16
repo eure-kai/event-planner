@@ -1,0 +1,22 @@
+{
+  "name": "practice-prototype",
+  "version": "1.0.0",
+  "description": "https://eure-kai.github.io/event-planner/",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eure-kai/practice-prototype.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eure-kai/practice-prototype/issues"
+  },
+  "homepage": "https://github.com/eure-kai/practice-prototype#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
